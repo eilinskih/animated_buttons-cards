@@ -44,15 +44,21 @@ transform: scale(3, 3)
         h3 {
             color: $red;
             letter-spacing: 0.1em;
+            opacity: 0;
+            transform: translateY(30px);
         }
        p {
         line-height: 1.5;
+        opacity: 0;
+        transform: translateY(30px);
         span {
             font-weight: 600;
         }
        }
        .buttons {
            margin-top: 30px;
+           opacity: 0;
+           transform: translateY(30px);
        }
        .btn-back {
            padding: 10px 10px;
@@ -74,67 +80,17 @@ transform: scale(3, 3)
         animation-duration: 1s;
         animation-name: popupOpen;
         h3 {
-            animation-duration: 1.5s;
-            animation-name: h3;
+            animation: elements 1.5s linear forwards;
         }
-        @keyframes h3 {
-            0% {
-                transform: translateY(30px);
-                opacity: 0; 
-            }
-            20% {
-                transform: translateY(10px);
-                opacity: 0; 
-            }
-            50% {
-                transform: translateY(5px);
-                opacity: 0; 
-            }
-            70% {
-                transform: translateY(-5px);
-                opacity: 0.8; 
-            }
-           
-            100% {
-                transform: translateY(0);
-                opacity: 1; 
-            }
-            }
         p {
-            animation-delay: 0.2s;
-            animation-duration: 1.5s;
-            animation-name: p;
+
+            animation: elements 1.5s 0.2s linear forwards;
         }
-        @keyframes p {
-            0% {
-                transform: translateY(30px);
-                opacity: 0; 
-            }
-            20% {
-                transform: translateY(10px);
-                opacity: 0; 
-            }
-            50% {
-                transform: translateY(5px);
-                opacity: 0; 
-            }
-            70% {
-                transform: translateY(-5px);
-                opacity: 0.8; 
-            }
-           
-            100% {
-                transform: translateY(0);
-                opacity: 1; 
-            }
-            }
 
         .buttons {
-            animation-delay: 0.4s;
-            animation-duration: 1.5s;
-            animation-name: p;   
+            animation: elements 1.5s 0.4s linear forwards;
         }
-        @keyframes p {
+        @keyframes elements {
             0% {
                 transform: translateY(30px);
                 opacity: 0; 
@@ -156,7 +112,7 @@ transform: scale(3, 3)
                 transform: translateY(0);
                 opacity: 1; 
             }
-            } 
+            }
     }
     @keyframes popupOpen {
         from {
