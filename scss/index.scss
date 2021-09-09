@@ -1,0 +1,169 @@
+@import '_colors';
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+    height: 100vh;
+    max-width: 100%;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+        color: $white;
+        text-decoration: none;
+        letter-spacing: 0.2em;
+        background-color: $red;
+        padding: 20px 30px;
+        border-radius: 15px;
+    }
+    .btn.hide {
+        display: none;
+    }
+    .btn.active {
+animation-duration: 1s;
+animation-name: btn;
+    }
+    @keyframes btn {
+        from {
+transform: scale(3, 3)
+        }
+        to {
+            transform: scale(1, 1)
+        }
+    }
+}
+.pop-up {
+    text-align: center;
+        max-width: 375px;
+        background-color: $white;
+        border-radius: 20px;
+        border: $red 6px solid;
+        padding: 0 30px 20px;
+        display: none;
+        h3 {
+            color: $red;
+            letter-spacing: 0.1em;
+        }
+       p {
+        line-height: 1.5;
+        span {
+            font-weight: 600;
+        }
+       }
+       .buttons {
+           margin-top: 30px;
+       }
+       .btn-back {
+           padding: 10px 10px;
+           border-radius: 10px;
+           border: $red 1px solid;
+           text-decoration: none;
+           color: $red;
+       } 
+       .btn-delete {
+        padding: 10px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: $white;
+        background-color: $red;
+    } 
+    }
+    .pop-up.active {
+        display: block;
+        animation-duration: 1s;
+        animation-name: popupOpen;
+        h3 {
+            animation-duration: 1.5s;
+            animation-name: h3;
+        }
+        @keyframes h3 {
+            0% {
+                transform: translateY(30px);
+                opacity: 0; 
+            }
+            20% {
+                transform: translateY(10px);
+                opacity: 0; 
+            }
+            50% {
+                transform: translateY(5px);
+                opacity: 0; 
+            }
+            70% {
+                transform: translateY(-5px);
+                opacity: 0.8; 
+            }
+           
+            100% {
+                transform: translateY(0);
+                opacity: 1; 
+            }
+            }
+        p {
+            animation-delay: 0.2s;
+            animation-duration: 1.5s;
+            animation-name: p;
+        }
+        @keyframes p {
+            0% {
+                transform: translateY(30px);
+                opacity: 0; 
+            }
+            20% {
+                transform: translateY(10px);
+                opacity: 0; 
+            }
+            50% {
+                transform: translateY(5px);
+                opacity: 0; 
+            }
+            70% {
+                transform: translateY(-5px);
+                opacity: 0.8; 
+            }
+           
+            100% {
+                transform: translateY(0);
+                opacity: 1; 
+            }
+            }
+
+        .buttons {
+            animation-delay: 0.4s;
+            animation-duration: 1.5s;
+            animation-name: p;   
+        }
+        @keyframes p {
+            0% {
+                transform: translateY(30px);
+                opacity: 0; 
+            }
+            20% {
+                transform: translateY(10px);
+                opacity: 0; 
+            }
+            50% {
+                transform: translateY(5px);
+                opacity: 0; 
+            }
+            70% {
+                transform: translateY(-5px);
+                opacity: 0.8; 
+            }
+           
+            100% {
+                transform: translateY(0);
+                opacity: 1; 
+            }
+            } 
+    }
+    @keyframes popupOpen {
+        from {
+            transform: scale(0.1, 0.1);
+        }
+       
+        to {
+            transform: scale(1, 1)
+        }
+        }
